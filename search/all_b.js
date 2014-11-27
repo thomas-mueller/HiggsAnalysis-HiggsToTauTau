@@ -5,7 +5,7 @@ var searchData=
   ['make_5funique',['make_unique',['../namespacech.html#a34936b9e16919f93ca72d0f164d83347',1,'ch']]],
   ['makeunique_2eh',['MakeUnique.h',['../_make_unique_8h.html',1,'']]],
   ['mass',['mass',['../structch_1_1syst_1_1mass.html',1,'ch::syst']]],
-  ['mass',['mass',['../classch_1_1_combine_harvester.html#a25c231ed8b1614c5d50f192210374474',1,'ch::CombineHarvester::mass()'],['../classch_1_1_nuisance.html#a1d7701e0662edaed26eb9668967fc3a8',1,'ch::Nuisance::mass()'],['../classch_1_1_observation.html#a8a3c59b54cc2de4e4e44bced77767fe3',1,'ch::Observation::mass()'],['../classch_1_1_process.html#a44109680b2b2e15b4ffa3c5f1802136c',1,'ch::Process::mass()']]],
+  ['mass',['mass',['../classch_1_1_combine_harvester.html#a25c231ed8b1614c5d50f192210374474',1,'ch::CombineHarvester::mass()'],['../classch_1_1_observation.html#a8a3c59b54cc2de4e4e44bced77767fe3',1,'ch::Observation::mass()'],['../classch_1_1_process.html#a44109680b2b2e15b4ffa3c5f1802136c',1,'ch::Process::mass()'],['../classch_1_1_systematic.html#af3ba8364bdd0f6e5d6c667e30eb2dc1b',1,'ch::Systematic::mass()']]],
   ['mass_5fset',['mass_set',['../classch_1_1_combine_harvester.html#a86674bf95164c39facfd5f9583aae613',1,'ch::CombineHarvester']]],
   ['massesfromrange',['MassesFromRange',['../namespacech.html#a9aa7fae276e9a3482b0e2e0b7adf779b',1,'ch']]],
   ['matchingprocess',['MatchingProcess',['../namespacech.html#a9c09b4e5a6dbbd49dfebd9235a2f60b5',1,'ch']]],

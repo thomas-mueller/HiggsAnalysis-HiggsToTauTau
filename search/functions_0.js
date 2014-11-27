@@ -10,8 +10,8 @@ var searchData=
   ['addsystematics_5fet_5fmt',['AddSystematics_et_mt',['../namespacech.html#aac947603f4cc50f70e7a8765da3e13d1',1,'ch']]],
   ['addsystematics_5ftt',['AddSystematics_tt',['../namespacech.html#ac1578f3e0a1da427e6750ba4cefd94b8',1,'ch']]],
   ['addworkspace',['AddWorkspace',['../classch_1_1_combine_harvester.html#a3d846dd6f5f88b912780e31ef58e17ff',1,'ch::CombineHarvester']]],
-  ['analysis',['analysis',['../classch_1_1_combine_harvester.html#a672af065808c26e0795259876787c57f',1,'ch::CombineHarvester::analysis()'],['../classch_1_1_nuisance.html#a28aac1382ed10ecd21b968578002eeb9',1,'ch::Nuisance::analysis()'],['../classch_1_1_observation.html#a218c25c456392b2135fe2bc167c8b19a',1,'ch::Observation::analysis()'],['../classch_1_1_process.html#aeb805206cc9384eed443eb0af84d71e0',1,'ch::Process::analysis()']]],
+  ['analysis',['analysis',['../classch_1_1_combine_harvester.html#a672af065808c26e0795259876787c57f',1,'ch::CombineHarvester::analysis()'],['../classch_1_1_observation.html#a218c25c456392b2135fe2bc167c8b19a',1,'ch::Observation::analysis()'],['../classch_1_1_process.html#aeb805206cc9384eed443eb0af84d71e0',1,'ch::Process::analysis()'],['../classch_1_1_systematic.html#ad1b2cea6db762cb634344e9c842450f9',1,'ch::Systematic::analysis()']]],
   ['analysis_5fset',['analysis_set',['../classch_1_1_combine_harvester.html#ad2c92025d60e32b438a3445aa756d631',1,'ch::CombineHarvester']]],
   ['any_5fof',['any_of',['../namespacech.html#a9ae81b01c3e51356f05c2734d4e7fd8d',1,'ch']]],
-  ['asymm',['asymm',['../classch_1_1_nuisance.html#a2961a1a17a79d61e74ac6948de351d31',1,'ch::Nuisance']]]
+  ['asymm',['asymm',['../classch_1_1_systematic.html#a495c6a0c53d7bf58fbb8ef0666f34deb',1,'ch::Systematic']]]
 ];

@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['observation',['Observation',['../classch_1_1_observation.html',1,'ch']]]
+  ['parameter',['Parameter',['../classch_1_1_parameter.html',1,'ch']]],
+  ['process',['Process',['../classch_1_1_process.html',1,'ch']]],
+  ['process',['process',['../structch_1_1syst_1_1process.html',1,'ch::syst']]]
 ];

@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['parameter_2ecc',['Parameter.cc',['../_parameter_8cc.html',1,'']]],
-  ['parameter_2eh',['Parameter.h',['../_parameter_8h.html',1,'']]],
-  ['postfitshapes_2ecpp',['PostFitShapes.cpp',['../_post_fit_shapes_8cpp.html',1,'']]],
-  ['process_2ecc',['Process.cc',['../_process_8cc.html',1,'']]],
-  ['process_2eh',['Process.h',['../_process_8h.html',1,'']]]
+  ['smlegacyexample_2ecpp',['SMLegacyExample.cpp',['../_s_m_legacy_example_8cpp.html',1,'']]],
+  ['soverbtools_2ecc',['SOverBTools.cc',['../_s_over_b_tools_8cc.html',1,'']]],
+  ['soverbtools_2eh',['SOverBTools.h',['../_s_over_b_tools_8h.html',1,'']]],
+  ['systematic_2ecc',['Systematic.cc',['../_systematic_8cc.html',1,'']]],
+  ['systematic_2eh',['Systematic.h',['../_systematic_8h.html',1,'']]],
+  ['systematics_2eh',['Systematics.h',['../_systematics_8h.html',1,'']]]
 ];
