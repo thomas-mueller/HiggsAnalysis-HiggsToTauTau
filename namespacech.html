@@ -162,6 +162,9 @@ Functions</h2></td></tr>
 <tr class="memitem:afdabce9fcf0e565dcd93d273e771ef68"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacech.html#afdabce9fcf0e565dcd93d273e771ef68">FnError</a> (std::string const &amp;message, std::string const &amp;file, unsigned line, std::string const &amp;fn)</td></tr>
 <tr class="memdesc:afdabce9fcf0e565dcd93d273e771ef68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates an error message which includes the name of the calling function and the filename and line number where the error occured.  <a href="#afdabce9fcf0e565dcd93d273e771ef68">More...</a><br /></td></tr>
 <tr class="separator:afdabce9fcf0e565dcd93d273e771ef68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34936b9e16919f93ca72d0f164d83347"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Args&gt; </td></tr>
+<tr class="memitem:a34936b9e16919f93ca72d0f164d83347"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacech.html#a34936b9e16919f93ca72d0f164d83347">make_unique</a> (Args &amp;&amp;...args)</td></tr>
+<tr class="separator:a34936b9e16919f93ca72d0f164d83347"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35c9af4e2f53f4686e4c4bbba535eb35"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacech.html#a35c9af4e2f53f4686e4c4bbba535eb35">IntegrateFloatRange</a> (TH1F const *hist, double xmin, double xmax)</td></tr>
 <tr class="separator:a35c9af4e2f53f4686e4c4bbba535eb35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9db822b84dd7cf9f1d3bc76a6a741498"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; TH1 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacech.html#a9db822b84dd7cf9f1d3bc76a6a741498">GetClonedTH1</a> (TFile *file, std::string const &amp;path)</td></tr>
@@ -616,6 +619,26 @@ template&lt;typename Input , typename Filter , typename Converter &gt; </div>
 <p>Should be used via the macro FNERROR which calls this function and inserts the file, line and fn arguments automatically. </p>
 
 <p>Definition at line <a class="el" href="_logging_8cc_source.html#l00032">32</a> of file <a class="el" href="_logging_8cc_source.html">Logging.cc</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a34936b9e16919f93ca72d0f164d83347"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename... Args&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;T&gt; ch::make_unique </td>
+          <td>(</td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_make_unique_8h_source.html#l00008">8</a> of file <a class="el" href="_make_unique_8h_source.html">MakeUnique.h</a>.</p>
 
 </div>
 </div>
