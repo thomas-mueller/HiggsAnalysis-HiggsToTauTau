@@ -13,5 +13,7 @@ var searchData=
   ['getrate',['GetRate',['../classch_1_1_combine_harvester.html#aff4165661f9f137607d6c3c881172689',1,'ch::CombineHarvester']]],
   ['getshape',['GetShape',['../classch_1_1_combine_harvester.html#a3d265eb50ea8ec70192788d985733d9d',1,'ch::CombineHarvester']]],
   ['getshapewithuncertainty',['GetShapeWithUncertainty',['../classch_1_1_combine_harvester.html#a749af47fa05e1e11b1488bfdb49efce5',1,'ch::CombineHarvester::GetShapeWithUncertainty()'],['../classch_1_1_combine_harvester.html#afeae4c75ae1a122fdcf0a7f28b15a9d8',1,'ch::CombineHarvester::GetShapeWithUncertainty(RooFitResult const *fit, unsigned n_samples)']]],
+  ['gettuple',['GetTuple',['../classch_1_1syst_1_1_syst_map.html#aec23426142e1cb3d640bb47db4932dbd',1,'ch::syst::SystMap::GetTuple()'],['../classch_1_1syst_1_1_syst_map_asymm.html#aff8fca8dc6bf5387dafb11c075677f34',1,'ch::syst::SystMapAsymm::GetTuple()']]],
+  ['gettupleset',['GetTupleSet',['../classch_1_1syst_1_1_syst_map.html#ad2fed05a0c421419ea4ebead6d205bb0',1,'ch::syst::SystMap::GetTupleSet()'],['../classch_1_1syst_1_1_syst_map_asymm.html#a43e04ec9efeff0239a428e517340c570',1,'ch::syst::SystMapAsymm::GetTupleSet()']]],
   ['getuncertainty',['GetUncertainty',['../classch_1_1_combine_harvester.html#a9c0e44635dc637746222f67e9be518e5',1,'ch::CombineHarvester::GetUncertainty()'],['../classch_1_1_combine_harvester.html#af71f64a1d858700bd16d98cee1c10c26',1,'ch::CombineHarvester::GetUncertainty(RooFitResult const *fit, unsigned n_samples)']]]
 ];

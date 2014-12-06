@@ -276,7 +276,7 @@ $(document).ready(function(){initNavTree('_combine_harvester_8cc_source.html',''
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordflow">throw</span> std::runtime_error(<a class="code" href="_logging_8h.html#ab140ae8826e1f99c5aa0e920a9c13112">FNERROR</a>(<span class="stringliteral">&quot;Observation already contains a shape&quot;</span>));</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  }</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  <span class="keywordflow">if</span> (verbosity_ &gt;= 1) {</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  <span class="keywordflow">if</span> (verbosity_ &gt;= 2) {</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <a class="code" href="_logging_8h.html#a7c001e91758abea6ce1e5609a873c852">LOGLINE</a>(log(), <span class="stringliteral">&quot;Extracting shapes for Observation:&quot;</span>);</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    log() &lt;&lt; <a class="code" href="classch_1_1_observation.html#a4f8f4cc0a612fc88effb03189daa3b13">Observation::PrintHeader</a> &lt;&lt; *entry &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <a class="code" href="_logging_8h.html#a7c001e91758abea6ce1e5609a873c852">LOGLINE</a>(log(), <span class="stringliteral">&quot;Mappings:&quot;</span>);</div>
@@ -292,20 +292,20 @@ $(document).ready(function(){initNavTree('_combine_harvester_8cc_source.html',''
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  boost::replace_all(mapping.pattern, <span class="stringliteral">&quot;$PROCESS&quot;</span>, entry-&gt;process());</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;  boost::replace_all(mapping.pattern, <span class="stringliteral">&quot;$MASS&quot;</span>, entry-&gt;mass());</div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  <span class="keywordflow">if</span> (verbosity_ &gt;= 1) {</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  <span class="keywordflow">if</span> (verbosity_ &gt;= 2) {</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <a class="code" href="_logging_8h.html#a7c001e91758abea6ce1e5609a873c852">LOGLINE</a>(log(), <span class="stringliteral">&quot;Resolved Mapping:&quot;</span>);</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    log() &lt;&lt; mapping &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  }</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  <span class="keywordflow">if</span> (mapping.IsHist()) {</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordflow">if</span> (verbosity_ &gt;= 1) <a class="code" href="_logging_8h.html#a7c001e91758abea6ce1e5609a873c852">LOGLINE</a>(log(), <span class="stringliteral">&quot;Mapping type in TH1&quot;</span>);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordflow">if</span> (verbosity_ &gt;= 2) <a class="code" href="_logging_8h.html#a7c001e91758abea6ce1e5609a873c852">LOGLINE</a>(log(), <span class="stringliteral">&quot;Mapping type in TH1&quot;</span>);</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="comment">// Pre-condition #3</span></div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="comment">// GetClonedTH1 will throw if this fails</span></div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    std::unique_ptr&lt;TH1&gt; h = <a class="code" href="namespacech.html#a9db822b84dd7cf9f1d3bc76a6a741498">GetClonedTH1</a>(mapping.file.get(), mapping.pattern);</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="comment">// Post-conditions #1 and #2</span></div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    entry-&gt;SetNormShapeAndRate(std::move(h));</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mapping.IsData()) {</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordflow">if</span> (verbosity_ &gt;= 1) <a class="code" href="_logging_8h.html#a7c001e91758abea6ce1e5609a873c852">LOGLINE</a>(log(), <span class="stringliteral">&quot;Mapping type is RooAbsData&quot;</span>);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordflow">if</span> (verbosity_ &gt;= 2) <a class="code" href="_logging_8h.html#a7c001e91758abea6ce1e5609a873c852">LOGLINE</a>(log(), <span class="stringliteral">&quot;Mapping type is RooAbsData&quot;</span>);</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="comment">// Pre-condition #3</span></div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="comment">// SetupWorkspace will throw if workspace not found</span></div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    StrPair res = SetupWorkspace(mapping);</div>
@@ -326,7 +326,7 @@ $(document).ready(function(){initNavTree('_combine_harvester_8cc_source.html',''
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordflow">throw</span> std::runtime_error(<a class="code" href="_logging_8h.html#ab140ae8826e1f99c5aa0e920a9c13112">FNERROR</a>(<span class="stringliteral">&quot;Process already contains a shape&quot;</span>));</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  }</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  <span class="keywordflow">if</span> (verbosity_ &gt;= 1) {</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  <span class="keywordflow">if</span> (verbosity_ &gt;= 2) {</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <a class="code" href="_logging_8h.html#a7c001e91758abea6ce1e5609a873c852">LOGLINE</a>(log(), <span class="stringliteral">&quot;Extracting shapes for Process:&quot;</span>);</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    log() &lt;&lt; <a class="code" href="classch_1_1_process.html#ab2cc280e1babe330441de6791e06c2c1">Process::PrintHeader</a> &lt;&lt; *entry &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <a class="code" href="_logging_8h.html#a7c001e91758abea6ce1e5609a873c852">LOGLINE</a>(log(), <span class="stringliteral">&quot;Mappings:&quot;</span>);</div>
@@ -342,20 +342,20 @@ $(document).ready(function(){initNavTree('_combine_harvester_8cc_source.html',''
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  boost::replace_all(mapping.pattern, <span class="stringliteral">&quot;$PROCESS&quot;</span>, entry-&gt;process());</div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;  boost::replace_all(mapping.pattern, <span class="stringliteral">&quot;$MASS&quot;</span>, entry-&gt;mass());</div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;  <span class="keywordflow">if</span> (verbosity_ &gt;= 1) {</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;  <span class="keywordflow">if</span> (verbosity_ &gt;= 2) {</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <a class="code" href="_logging_8h.html#a7c001e91758abea6ce1e5609a873c852">LOGLINE</a>(log(), <span class="stringliteral">&quot;Resolved Mapping:&quot;</span>);</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    log() &lt;&lt; mapping &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;  }</div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;</div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  <span class="keywordflow">if</span> (mapping.IsHist()) {</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="keywordflow">if</span> (verbosity_ &gt;= 1) <a class="code" href="_logging_8h.html#a7c001e91758abea6ce1e5609a873c852">LOGLINE</a>(log(), <span class="stringliteral">&quot;Mapping type in TH1&quot;</span>);</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="keywordflow">if</span> (verbosity_ &gt;= 2) <a class="code" href="_logging_8h.html#a7c001e91758abea6ce1e5609a873c852">LOGLINE</a>(log(), <span class="stringliteral">&quot;Mapping type in TH1&quot;</span>);</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="comment">// Pre-condition #3</span></div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="comment">// GetClonedTH1 will throw if this fails</span></div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    std::unique_ptr&lt;TH1&gt; h = <a class="code" href="namespacech.html#a9db822b84dd7cf9f1d3bc76a6a741498">GetClonedTH1</a>(mapping.file.get(), mapping.pattern);</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="comment">// Post-conditions #1 and #2</span></div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    entry-&gt;SetNormShapeAndRate(std::move(h));</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mapping.IsPdf()) {</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keywordflow">if</span> (verbosity_ &gt;= 1) <a class="code" href="_logging_8h.html#a7c001e91758abea6ce1e5609a873c852">LOGLINE</a>(log(), <span class="stringliteral">&quot;Mapping type is RooAbsPdf&quot;</span>);</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keywordflow">if</span> (verbosity_ &gt;= 2) <a class="code" href="_logging_8h.html#a7c001e91758abea6ce1e5609a873c852">LOGLINE</a>(log(), <span class="stringliteral">&quot;Mapping type is RooAbsPdf&quot;</span>);</div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="comment">// Pre-condition #3</span></div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="comment">// SetupWorkspace will throw if workspace not found</span></div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    StrPair res = SetupWorkspace(mapping);</div>
@@ -364,7 +364,7 @@ $(document).ready(function(){initNavTree('_combine_harvester_8cc_source.html',''
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <span class="keywordflow">if</span> (!pdf) {</div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;      <span class="keywordflow">throw</span> std::runtime_error(<a class="code" href="_logging_8h.html#ab140ae8826e1f99c5aa0e920a9c13112">FNERROR</a>(<span class="stringliteral">&quot;RooAbsPdf not found in workspace&quot;</span>));</div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    }</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="keywordflow">if</span> (verbosity_ &gt;= 1) {</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="keywordflow">if</span> (verbosity_ &gt;= 2) {</div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;      pdf-&gt;printStream(log(), pdf-&gt;defaultPrintContents(0),</div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                     pdf-&gt;defaultPrintStyle(0), <span class="stringliteral">&quot;[LoadShapes] &quot;</span>);</div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    }</div>
@@ -379,7 +379,7 @@ $(document).ready(function(){initNavTree('_combine_harvester_8cc_source.html',''
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <span class="keywordflow">if</span> (norm) {</div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;      <span class="comment">// Post-condition #3</span></div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;      entry-&gt;set_norm(norm);</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;      <span class="keywordflow">if</span> (verbosity_ &gt;= 1) {</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;      <span class="keywordflow">if</span> (verbosity_ &gt;= 2) {</div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        <a class="code" href="_logging_8h.html#a7c001e91758abea6ce1e5609a873c852">LOGLINE</a>(log(), <span class="stringliteral">&quot;Normalisation RooAbsReal found&quot;</span>);</div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        norm-&gt;printStream(log(), norm-&gt;defaultPrintContents(0),</div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                          norm-&gt;defaultPrintStyle(0), <span class="stringliteral">&quot;[LoadShapes] &quot;</span>);</div>
@@ -397,11 +397,11 @@ $(document).ready(function(){initNavTree('_combine_harvester_8cc_source.html',''
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <span class="comment">// Import any paramters of the RooAbsPdf and the RooRealVar</span></div>
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    RooAbsData <span class="keyword">const</span>* data_obj = FindMatchingData(entry);</div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="keywordflow">if</span> (data_obj) {</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;      <span class="keywordflow">if</span> (verbosity_ &gt;= 1) <a class="code" href="_logging_8h.html#a7c001e91758abea6ce1e5609a873c852">LOGLINE</a>(log(), <span class="stringliteral">&quot;Matching RooAbsData has been found&quot;</span>);</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;      <span class="keywordflow">if</span> (verbosity_ &gt;= 2) <a class="code" href="_logging_8h.html#a7c001e91758abea6ce1e5609a873c852">LOGLINE</a>(log(), <span class="stringliteral">&quot;Matching RooAbsData has been found&quot;</span>);</div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;      ImportParameters(pdf-&gt;getParameters(data_obj));</div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;      <span class="keywordflow">if</span> (norm) ImportParameters(norm-&gt;getParameters(data_obj));</div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;      <span class="keywordflow">if</span> (verbosity_ &gt;= 1)</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;      <span class="keywordflow">if</span> (verbosity_ &gt;= 2)</div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        <a class="code" href="_logging_8h.html#a7c001e91758abea6ce1e5609a873c852">LOGLINE</a>(log(), <span class="stringliteral">&quot;No RooAbsData found, assume observable CMS_th1x&quot;</span>);</div>
 <div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;      RooRealVar mx(<span class="stringliteral">&quot;CMS_th1x&quot;</span> , <span class="stringliteral">&quot;CMS_th1x&quot;</span>, 0, 1);</div>
 <div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;      RooArgSet tmp_set(mx);</div>
@@ -417,7 +417,7 @@ $(document).ready(function(){initNavTree('_combine_harvester_8cc_source.html',''
 <div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="keywordflow">throw</span> std::runtime_error(<a class="code" href="_logging_8h.html#ab140ae8826e1f99c5aa0e920a9c13112">FNERROR</a>(<span class="stringliteral">&quot;Systematic already contains a shape&quot;</span>));</div>
 <div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;  }</div>
 <div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;  <span class="keywordflow">if</span> (verbosity_ &gt;= 1) {</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;  <span class="keywordflow">if</span> (verbosity_ &gt;= 2) {</div>
 <div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    <a class="code" href="_logging_8h.html#a7c001e91758abea6ce1e5609a873c852">LOGLINE</a>(log(), <span class="stringliteral">&quot;Extracting shapes for Systematic:&quot;</span>);</div>
 <div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    log() &lt;&lt; <a class="code" href="classch_1_1_systematic.html#aef9f627405060f65815dc15a1d4abbaf">Systematic::PrintHeader</a> &lt;&lt; *entry &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <a class="code" href="_logging_8h.html#a7c001e91758abea6ce1e5609a873c852">LOGLINE</a>(log(), <span class="stringliteral">&quot;Mappings:&quot;</span>);</div>
@@ -456,111 +456,111 @@ $(document).ready(function(){initNavTree('_combine_harvester_8cc_source.html',''
 <div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;  entry-&gt;SetShapesAndVals(std::move(h_u), std::move(h_d), h.get());</div>
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;}</div>
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;HistMapping <span class="keyword">const</span>&amp; CombineHarvester::ResolveMapping(</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    std::string <span class="keyword">const</span>&amp; process, std::string <span class="keyword">const</span>&amp; bin,</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    std::vector&lt;HistMapping&gt; <span class="keyword">const</span>&amp; mappings) {</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;  StrPairVec attempts = GenerateShapeMapAttempts(process, bin);</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> a = 0; a &lt; attempts.size(); ++a) {</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> m = 0; m &lt; mappings.size(); ++m) {</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;      <span class="keywordflow">if</span> ((attempts[a].first == mappings[m].process) &amp;&amp;</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;        (attempts[a].second == mappings[m].category)) {</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;        <span class="keywordflow">return</span> mappings[m];</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;      }</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    }</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;  }</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;  <span class="comment">// If we get this far then we didn&#39;t find a valid mapping</span></div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;  <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;ResolveMapping: valid mapping not found&quot;</span>);</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;}</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;CombineHarvester::StrPairVec CombineHarvester::GenerateShapeMapAttempts(</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    std::string process, std::string category) {</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;  CombineHarvester::StrPairVec result;</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;  result.push_back(std::make_pair(process   , category));</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;  result.push_back(std::make_pair(<span class="stringliteral">&quot;*&quot;</span>       , category));</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;  result.push_back(std::make_pair(process   , <span class="stringliteral">&quot;*&quot;</span>));</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;  result.push_back(std::make_pair(<span class="stringliteral">&quot;*&quot;</span>       , <span class="stringliteral">&quot;*&quot;</span>));</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;  <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;}</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;std::pair&lt;std::string, std::string&gt; CombineHarvester::SetupWorkspace(</div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    HistMapping <span class="keyword">const</span>&amp; mapping) {</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;  std::string p = mapping.pattern;</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;  std::pair&lt;std::string, std::string&gt; res;</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;  std::size_t colon = p.find_last_of(<span class="charliteral">&#39;:&#39;</span>);</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;  <span class="keywordflow">if</span> (colon != p.npos) {</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    res.first = p.substr(0, colon);</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    res.second = p.substr(colon+1);</div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Something went wrong here\n&quot;</span>;</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    <span class="keywordflow">return</span> res;</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;  }</div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;  <span class="keywordflow">if</span> (!wspaces_.count(res.first)) {</div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;    <span class="keywordflow">if</span> (mapping.file) {</div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;      mapping.file-&gt;cd();</div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;      RooWorkspace* w =</div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;          <span class="keyword">dynamic_cast&lt;</span>RooWorkspace*<span class="keyword">&gt;</span>(gDirectory-&gt;Get(res.first.c_str()));</div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;      <a class="code" href="classch_1_1_combine_harvester.html#a3d846dd6f5f88b912780e31ef58e17ff">AddWorkspace</a>(w);</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;      <span class="keyword">delete</span> w;</div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    }</div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;  }</div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;  <span class="keywordflow">return</span> res;</div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;}</div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;</div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;<span class="keywordtype">void</span> CombineHarvester::ImportParameters(RooArgSet *vars) {</div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;  <span class="keyword">auto</span> x = vars-&gt;createIterator();</div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;  <span class="keywordflow">do</span> {</div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    RooRealVar *y = <span class="keyword">dynamic_cast&lt;</span>RooRealVar*<span class="keyword">&gt;</span>(**x);</div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;    <span class="keywordflow">if</span> (y) {</div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;      <span class="keywordflow">if</span> (!params_.count(y-&gt;GetName())) {</div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;        <span class="keywordflow">if</span> (verbosity_ &gt;= 1) {</div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;          log() &lt;&lt; <span class="stringliteral">&quot;[ImportParameters] Creating parameter from RooRealVar:\n&quot;</span>;</div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;          y-&gt;printStream(log(), y-&gt;defaultPrintContents(0),</div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;                           y-&gt;defaultPrintStyle(0), <span class="stringliteral">&quot;[ImportParameters] &quot;</span>);</div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;        }</div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;        Parameter par;</div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;        par.set_name(y-&gt;GetName());</div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;        par.set_val(y-&gt;getVal());</div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;        par.set_err_d(0.0);</div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;        par.set_err_u(0.0);</div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;        params_[y-&gt;GetName()] = std::make_shared&lt;Parameter&gt;(par);</div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;        <span class="keywordflow">if</span> (verbosity_ &gt;= 1)</div>
-<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;          log() &lt;&lt; <span class="stringliteral">&quot;[ImportParameters] Parameter \&quot;&quot;</span> &lt;&lt; y-&gt;GetName()</div>
-<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;                &lt;&lt; <span class="stringliteral">&quot;\&quot; already exists\n&quot;</span>;</div>
-<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;      }</div>
-<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;      Parameter *param = params_[y-&gt;GetName()].get();</div>
-<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;      std::vector&lt;RooRealVar *&gt; &amp; p_vars = param-&gt;vars();</div>
-<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;      <span class="keywordflow">if</span> (std::find(p_vars.begin(), p_vars.end(), y) == p_vars.end()) {</div>
-<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;        p_vars.push_back(y);</div>
-<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;       <span class="keywordflow">if</span> (verbosity_ &gt;= 1)</div>
-<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;         log() &lt;&lt; <span class="stringliteral">&quot;[ImportParameters] Parameter now stores &quot;</span> &lt;&lt; p_vars.size()</div>
-<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;               &lt;&lt; <span class="stringliteral">&quot; link(s) to RooRealVar objects\n&quot;</span>;</div>
-<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;        <span class="keywordflow">if</span> (verbosity_ &gt;= 1)</div>
-<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;          log() &lt;&lt; <span class="stringliteral">&quot;[ImportParameters] Parameter already stores link to &quot;</span></div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;                   <span class="stringliteral">&quot;RooRealVar object\n&quot;</span>;</div>
-<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;      }</div>
-<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;    }</div>
-<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;  } <span class="keywordflow">while</span> (x-&gt;Next());</div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;}</div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;</div>
-<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;RooAbsData <span class="keyword">const</span>* CombineHarvester::FindMatchingData(Process <span class="keyword">const</span>* proc) {</div>
-<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;  RooAbsData <span class="keyword">const</span>* data_obj = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0; i &lt; obs_.size(); ++i) {</div>
-<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;    <span class="keywordflow">if</span> (proc-&gt;bin() == obs_[i]-&gt;bin() &amp;&amp;</div>
-<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;        proc-&gt;bin_id() == obs_[i]-&gt;bin_id()) {</div>
-<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;      data_obj = obs_[i]-&gt;data();</div>
-<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;    }</div>
-<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;  }</div>
-<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;  <span class="keywordflow">return</span> data_obj;</div>
-<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;}</div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;}</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;HistMapping <span class="keyword">const</span>&amp; CombineHarvester::ResolveMapping(</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    std::string <span class="keyword">const</span>&amp; process, std::string <span class="keyword">const</span>&amp; bin,</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    std::vector&lt;HistMapping&gt; <span class="keyword">const</span>&amp; mappings) {</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;  StrPairVec attempts = GenerateShapeMapAttempts(process, bin);</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> a = 0; a &lt; attempts.size(); ++a) {</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> m = 0; m &lt; mappings.size(); ++m) {</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;      <span class="keywordflow">if</span> ((attempts[a].first == mappings[m].process) &amp;&amp;</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;        (attempts[a].second == mappings[m].category)) {</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;        <span class="keywordflow">return</span> mappings[m];</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;      }</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    }</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;  }</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;  <span class="comment">// If we get this far then we didn&#39;t find a valid mapping</span></div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;  <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;ResolveMapping: valid mapping not found&quot;</span>);</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;}</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;CombineHarvester::StrPairVec CombineHarvester::GenerateShapeMapAttempts(</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    std::string process, std::string category) {</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;  CombineHarvester::StrPairVec result;</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;  result.push_back(std::make_pair(process   , category));</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;  result.push_back(std::make_pair(<span class="stringliteral">&quot;*&quot;</span>       , category));</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;  result.push_back(std::make_pair(process   , <span class="stringliteral">&quot;*&quot;</span>));</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;  result.push_back(std::make_pair(<span class="stringliteral">&quot;*&quot;</span>       , <span class="stringliteral">&quot;*&quot;</span>));</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;  <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;}</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;std::pair&lt;std::string, std::string&gt; CombineHarvester::SetupWorkspace(</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    HistMapping <span class="keyword">const</span>&amp; mapping) {</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;  std::string p = mapping.pattern;</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;  std::pair&lt;std::string, std::string&gt; res;</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;  std::size_t colon = p.find_last_of(<span class="charliteral">&#39;:&#39;</span>);</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;  <span class="keywordflow">if</span> (colon != p.npos) {</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;    res.first = p.substr(0, colon);</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;    res.second = p.substr(colon+1);</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Something went wrong here\n&quot;</span>;</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;    <span class="keywordflow">return</span> res;</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;  }</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;  <span class="keywordflow">if</span> (!wspaces_.count(res.first)) {</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;    <span class="keywordflow">if</span> (mapping.file) {</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;      mapping.file-&gt;cd();</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;      RooWorkspace* w =</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;          <span class="keyword">dynamic_cast&lt;</span>RooWorkspace*<span class="keyword">&gt;</span>(gDirectory-&gt;Get(res.first.c_str()));</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;      <a class="code" href="classch_1_1_combine_harvester.html#a3d846dd6f5f88b912780e31ef58e17ff">AddWorkspace</a>(w);</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;      <span class="keyword">delete</span> w;</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    }</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;  }</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;  <span class="keywordflow">return</span> res;</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;}</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;<span class="keywordtype">void</span> CombineHarvester::ImportParameters(RooArgSet *vars) {</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;  <span class="keyword">auto</span> x = vars-&gt;createIterator();</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;  <span class="keywordflow">do</span> {</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;    RooRealVar *y = <span class="keyword">dynamic_cast&lt;</span>RooRealVar*<span class="keyword">&gt;</span>(**x);</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;    <span class="keywordflow">if</span> (y) {</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;      <span class="keywordflow">if</span> (!params_.count(y-&gt;GetName())) {</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;        <span class="keywordflow">if</span> (verbosity_ &gt;= 1) {</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;          log() &lt;&lt; <span class="stringliteral">&quot;[ImportParameters] Creating parameter from RooRealVar:\n&quot;</span>;</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;          y-&gt;printStream(log(), y-&gt;defaultPrintContents(0),</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;                           y-&gt;defaultPrintStyle(0), <span class="stringliteral">&quot;[ImportParameters] &quot;</span>);</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;        }</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;        Parameter par;</div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;        par.set_name(y-&gt;GetName());</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;        par.set_val(y-&gt;getVal());</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;        par.set_err_d(0.0);</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;        par.set_err_u(0.0);</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;        params_[y-&gt;GetName()] = std::make_shared&lt;Parameter&gt;(par);</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;        <span class="keywordflow">if</span> (verbosity_ &gt;= 1)</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;          log() &lt;&lt; <span class="stringliteral">&quot;[ImportParameters] Parameter \&quot;&quot;</span> &lt;&lt; y-&gt;GetName()</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;                &lt;&lt; <span class="stringliteral">&quot;\&quot; already exists\n&quot;</span>;</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;      }</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;      Parameter *param = params_[y-&gt;GetName()].get();</div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;      std::vector&lt;RooRealVar *&gt; &amp; p_vars = param-&gt;vars();</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;      <span class="keywordflow">if</span> (std::find(p_vars.begin(), p_vars.end(), y) == p_vars.end()) {</div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;        p_vars.push_back(y);</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;       <span class="keywordflow">if</span> (verbosity_ &gt;= 1)</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;         log() &lt;&lt; <span class="stringliteral">&quot;[ImportParameters] Parameter now stores &quot;</span> &lt;&lt; p_vars.size()</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;               &lt;&lt; <span class="stringliteral">&quot; link(s) to RooRealVar objects\n&quot;</span>;</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;        <span class="keywordflow">if</span> (verbosity_ &gt;= 1)</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;          log() &lt;&lt; <span class="stringliteral">&quot;[ImportParameters] Parameter already stores link to &quot;</span></div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;                   <span class="stringliteral">&quot;RooRealVar object\n&quot;</span>;</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;      }</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;    }</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;  } <span class="keywordflow">while</span> (x-&gt;Next());</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;}</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;RooAbsData <span class="keyword">const</span>* CombineHarvester::FindMatchingData(Process <span class="keyword">const</span>* proc) {</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;  RooAbsData <span class="keyword">const</span>* data_obj = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0; i &lt; obs_.size(); ++i) {</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;    <span class="keywordflow">if</span> (proc-&gt;bin() == obs_[i]-&gt;bin() &amp;&amp;</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;        proc-&gt;bin_id() == obs_[i]-&gt;bin_id()) {</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;      data_obj = obs_[i]-&gt;data();</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;    }</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;  }</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;  <span class="keywordflow">return</span> data_obj;</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;}</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;}</div>
 <div class="ttc" id="classch_1_1_combine_harvester_html_a6b7c11550052d3edd98cd0971280ff79"><div class="ttname"><a href="classch_1_1_combine_harvester.html#a6b7c11550052d3edd98cd0971280ff79">ch::CombineHarvester::swap</a></div><div class="ttdeci">friend void swap(CombineHarvester &amp;first, CombineHarvester &amp;second)</div><div class="ttdef"><b>Definition:</b> <a href="_combine_harvester_8cc_source.html#l00020">CombineHarvester.cc:20</a></div></div>
 <div class="ttc" id="classch_1_1_combine_harvester_html_a3d846dd6f5f88b912780e31ef58e17ff"><div class="ttname"><a href="classch_1_1_combine_harvester.html#a3d846dd6f5f88b912780e31ef58e17ff">ch::CombineHarvester::AddWorkspace</a></div><div class="ttdeci">void AddWorkspace(RooWorkspace const *ws)</div><div class="ttdef"><b>Definition:</b> <a href="_combine_harvester___creation_8cc_source.html#l00101">CombineHarvester_Creation.cc:101</a></div></div>
 <div class="ttc" id="classch_1_1_combine_harvester_html_a463bab1fa1cc7098f35d82c78a10fb9d"><div class="ttname"><a href="classch_1_1_combine_harvester.html#a463bab1fa1cc7098f35d82c78a10fb9d">ch::CombineHarvester::data</a></div><div class="ttdeci">CombineHarvester &amp; data()</div><div class="ttdef"><b>Definition:</b> <a href="_combine_harvester___filters_8cc_source.html#l00124">CombineHarvester_Filters.cc:124</a></div></div>
 <div class="ttc" id="classch_1_1_observation_html_a4f8f4cc0a612fc88effb03189daa3b13"><div class="ttname"><a href="classch_1_1_observation.html#a4f8f4cc0a612fc88effb03189daa3b13">ch::Observation::PrintHeader</a></div><div class="ttdeci">static std::ostream &amp; PrintHeader(std::ostream &amp;out)</div><div class="ttdef"><b>Definition:</b> <a href="_observation_8cc_source.html#l00081">Observation.cc:81</a></div></div>
 <div class="ttc" id="classch_1_1_parameter_html_a62b6307c0675a81c420b9d6807928227"><div class="ttname"><a href="classch_1_1_parameter.html#a62b6307c0675a81c420b9d6807928227">ch::Parameter::PrintHeader</a></div><div class="ttdeci">static std::ostream &amp; PrintHeader(std::ostream &amp;out)</div><div class="ttdef"><b>Definition:</b> <a href="_parameter_8cc_source.html#l00047">Parameter.cc:47</a></div></div>
-<div class="ttc" id="classch_1_1_combine_harvester_html"><div class="ttname"><a href="classch_1_1_combine_harvester.html">ch::CombineHarvester</a></div><div class="ttdef"><b>Definition:</b> <a href="_combine_harvester_8h_source.html#l00044">CombineHarvester.h:44</a></div></div>
+<div class="ttc" id="classch_1_1_combine_harvester_html"><div class="ttname"><a href="classch_1_1_combine_harvester.html">ch::CombineHarvester</a></div><div class="ttdef"><b>Definition:</b> <a href="_combine_harvester_8h_source.html#l00026">CombineHarvester.h:26</a></div></div>
 <div class="ttc" id="classch_1_1_combine_harvester_html_ade0f7c161d078a189404a274b93336d2"><div class="ttname"><a href="classch_1_1_combine_harvester.html#ade0f7c161d078a189404a274b93336d2">ch::CombineHarvester::cp</a></div><div class="ttdeci">CombineHarvester cp()</div><div class="ttdef"><b>Definition:</b> <a href="_combine_harvester_8cc_source.html#l00141">CombineHarvester.cc:141</a></div></div>
 <div class="ttc" id="classch_1_1_observation_html_a95d19e58b38c6dd6313eab955309eeda"><div class="ttname"><a href="classch_1_1_observation.html#a95d19e58b38c6dd6313eab955309eeda">ch::Observation::shape</a></div><div class="ttdeci">TH1 const * shape() const </div><div class="ttdef"><b>Definition:</b> <a href="_observation_8h_source.html#l00041">Observation.h:41</a></div></div>
 <div class="ttc" id="_logging_8h_html_a7c001e91758abea6ce1e5609a873c852"><div class="ttname"><a href="_logging_8h.html#a7c001e91758abea6ce1e5609a873c852">LOGLINE</a></div><div class="ttdeci">#define LOGLINE(x, y)</div><div class="ttdef"><b>Definition:</b> <a href="_logging_8h_source.html#l00010">Logging.h:10</a></div></div>

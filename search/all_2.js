@@ -22,5 +22,6 @@ var searchData=
   ['cross',['cross',['../namespacech_1_1syst_1_1detail.html#a6ff1b8f8a66a58de42201c42ce5ba238',1,'ch::syst::detail']]],
   ['cross_5fimp',['cross_imp',['../namespacech_1_1syst_1_1detail.html#a54c49b65dbe6b3a81b35285e8bf6e301',1,'ch::syst::detail::cross_imp(F f)'],['../namespacech_1_1syst_1_1detail.html#ac32c733037a3b246dd1a9d9071284c1e',1,'ch::syst::detail::cross_imp(F f, std::vector&lt; H &gt; const &amp;h, std::vector&lt; Ts &gt; const &amp;...t)']]],
   ['detail',['detail',['../namespacech_1_1syst_1_1detail.html',1,'ch::syst']]],
-  ['syst',['syst',['../namespacech_1_1syst.html',1,'ch']]]
+  ['syst',['syst',['../namespacech_1_1syst.html',1,'ch']]],
+  ['tupleprint',['tupleprint',['../namespacech_1_1tupleprint.html',1,'ch']]]
 ];

@@ -96,7 +96,6 @@ $(document).ready(function(){initNavTree('classch_1_1_combine_harvester.html',''
 
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#friends">Friends</a>  </div>
   <div class="headertitle">
 <div class="title">ch::CombineHarvester Class Reference</div>  </div>
@@ -107,6 +106,9 @@ $(document).ready(function(){initNavTree('classch_1_1_combine_harvester.html',''
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Constructors, destructors and copying</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Distinct shallow and deep copying methods are provided. A deep copy creates a completely independent <a class="el" href="classch_1_1_combine_harvester.html">CombineHarvester</a> instace: all <a class="el" href="classch_1_1_observation.html">Observation</a>, <a class="el" href="classch_1_1_process.html">Process</a>, <a class="el" href="classch_1_1_systematic.html">Systematic</a> and <a class="el" href="classch_1_1_parameter.html">Parameter</a> objects are cloned, as well as any histogram objects they may contain and any attached RooWorkspaces. In a shallow copy these objects are shared with the original <a class="el" href="classch_1_1_combine_harvester.html">CombineHarvester</a> instance. </p>
+</div></td></tr>
 <tr class="memitem:a359a11f3f6f9ab27fd7f047a6bf31ae8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classch_1_1_combine_harvester.html#a359a11f3f6f9ab27fd7f047a6bf31ae8">CombineHarvester</a> ()</td></tr>
 <tr class="separator:a359a11f3f6f9ab27fd7f047a6bf31ae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71a57cb6de8ede0b1e8ac51d73571a2a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classch_1_1_combine_harvester.html#a71a57cb6de8ede0b1e8ac51d73571a2a">~CombineHarvester</a> ()</td></tr>
@@ -119,37 +121,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a537e7bf110bf4e466d5c39843e76fd03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade0f7c161d078a189404a274b93336d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classch_1_1_combine_harvester.html">CombineHarvester</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classch_1_1_combine_harvester.html#ade0f7c161d078a189404a274b93336d2">cp</a> ()</td></tr>
 <tr class="separator:ade0f7c161d078a189404a274b93336d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Logging and Printing</div></td></tr>
 <tr class="memitem:a63ffe9b598a7a6dc9f3cab118b3703df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classch_1_1_combine_harvester.html">CombineHarvester</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classch_1_1_combine_harvester.html#a63ffe9b598a7a6dc9f3cab118b3703df">PrintAll</a> ()</td></tr>
 <tr class="separator:a63ffe9b598a7a6dc9f3cab118b3703df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00245515d95807d1d0c9501c5360ac01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classch_1_1_combine_harvester.html#a00245515d95807d1d0c9501c5360ac01">SetVerbosity</a> (unsigned verbosity)</td></tr>
 <tr class="separator:a00245515d95807d1d0c9501c5360ac01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a224525ed617dae2b4b1e410a12cc129d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a224525ed617dae2b4b1e410a12cc129d"><td class="memTemplItemLeft" align="right" valign="top">std::set&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classch_1_1_combine_harvester.html#a224525ed617dae2b4b1e410a12cc129d">GenerateSetFromProcs</a> (std::function&lt; T(<a class="el" href="classch_1_1_process.html">ch::Process</a> const *)&gt; func)</td></tr>
-<tr class="separator:a224525ed617dae2b4b1e410a12cc129d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01e59627c04498ff02ff2d8a9eccc1d4"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a01e59627c04498ff02ff2d8a9eccc1d4"><td class="memTemplItemLeft" align="right" valign="top">std::set&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classch_1_1_combine_harvester.html#a01e59627c04498ff02ff2d8a9eccc1d4">GenerateSetFromObs</a> (std::function&lt; T(<a class="el" href="classch_1_1_observation.html">ch::Observation</a> const *)&gt; func)</td></tr>
-<tr class="separator:a01e59627c04498ff02ff2d8a9eccc1d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a324d0e617b9519bc30099c57d4f7be"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a3a324d0e617b9519bc30099c57d4f7be"><td class="memTemplItemLeft" align="right" valign="top">std::set&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classch_1_1_combine_harvester.html#a3a324d0e617b9519bc30099c57d4f7be">GenerateSetFromSysts</a> (std::function&lt; T(<a class="el" href="classch_1_1_systematic.html">ch::Systematic</a> const *)&gt; func)</td></tr>
-<tr class="separator:a3a324d0e617b9519bc30099c57d4f7be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a869c951c635b86fba33b2c550c9c39c9"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classch_1_1_combine_harvester.html#a869c951c635b86fba33b2c550c9c39c9">bin_set</a> ()</td></tr>
-<tr class="separator:a869c951c635b86fba33b2c550c9c39c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51e79e40581a2f3602292cde9a858784"><td class="memItemLeft" align="right" valign="top">std::set&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classch_1_1_combine_harvester.html#a51e79e40581a2f3602292cde9a858784">bin_id_set</a> ()</td></tr>
-<tr class="separator:a51e79e40581a2f3602292cde9a858784"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54433aa1b16fad10c0d29f5d8c789716"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classch_1_1_combine_harvester.html#a54433aa1b16fad10c0d29f5d8c789716">process_set</a> ()</td></tr>
-<tr class="separator:a54433aa1b16fad10c0d29f5d8c789716"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2c92025d60e32b438a3445aa756d631"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classch_1_1_combine_harvester.html#ad2c92025d60e32b438a3445aa756d631">analysis_set</a> ()</td></tr>
-<tr class="separator:ad2c92025d60e32b438a3445aa756d631"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f1ada299ed6d20f749cf10f589c25df"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classch_1_1_combine_harvester.html#a9f1ada299ed6d20f749cf10f589c25df">era_set</a> ()</td></tr>
-<tr class="separator:a9f1ada299ed6d20f749cf10f589c25df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8d68c05c6be27db6568098a15f07e5c"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classch_1_1_combine_harvester.html#aa8d68c05c6be27db6568098a15f07e5c">channel_set</a> ()</td></tr>
-<tr class="separator:aa8d68c05c6be27db6568098a15f07e5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86674bf95164c39facfd5f9583aae613"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classch_1_1_combine_harvester.html#a86674bf95164c39facfd5f9583aae613">mass_set</a> ()</td></tr>
-<tr class="separator:a86674bf95164c39facfd5f9583aae613"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3ef7424cb86d12fd294d9c6de98d533"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classch_1_1_combine_harvester.html#ac3ef7424cb86d12fd294d9c6de98d533">syst_name_set</a> ()</td></tr>
-<tr class="separator:ac3ef7424cb86d12fd294d9c6de98d533"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6db7fd938efd2ce05454a72c4b6cbc78"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classch_1_1_combine_harvester.html#a6db7fd938efd2ce05454a72c4b6cbc78">syst_type_set</a> ()</td></tr>
-<tr class="separator:a6db7fd938efd2ce05454a72c4b6cbc78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Datacards</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Methods for the reading and writing of datacards.</p>
 <p>As well as reading or writing the plain-text datacard files these methods also handle the automatic loading and saving of any TH1 objects or RooWorkspaces. </p>
@@ -211,6 +187,36 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a91821b9464ebaacb5b92be2b3bc794f8"><td class="memTemplParams" colspan="2">template&lt;typename Function &gt; </td></tr>
 <tr class="memitem:a91821b9464ebaacb5b92be2b3bc794f8"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classch_1_1_combine_harvester.html">CombineHarvester</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classch_1_1_combine_harvester.html#a91821b9464ebaacb5b92be2b3bc794f8">FilterSysts</a> (Function func)</td></tr>
 <tr class="separator:a91821b9464ebaacb5b92be2b3bc794f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Set producers</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Methods that extract sets of properties from the <a class="el" href="classch_1_1_observation.html">Observation</a>, <a class="el" href="classch_1_1_process.html">Process</a> and <a class="el" href="classch_1_1_systematic.html">Systematic</a> entries </p>
+</div></td></tr>
+<tr class="memitem:a224525ed617dae2b4b1e410a12cc129d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a224525ed617dae2b4b1e410a12cc129d"><td class="memTemplItemLeft" align="right" valign="top">std::set&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classch_1_1_combine_harvester.html#a224525ed617dae2b4b1e410a12cc129d">GenerateSetFromProcs</a> (std::function&lt; T(<a class="el" href="classch_1_1_process.html">ch::Process</a> const *)&gt; func)</td></tr>
+<tr class="separator:a224525ed617dae2b4b1e410a12cc129d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01e59627c04498ff02ff2d8a9eccc1d4"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a01e59627c04498ff02ff2d8a9eccc1d4"><td class="memTemplItemLeft" align="right" valign="top">std::set&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classch_1_1_combine_harvester.html#a01e59627c04498ff02ff2d8a9eccc1d4">GenerateSetFromObs</a> (std::function&lt; T(<a class="el" href="classch_1_1_observation.html">ch::Observation</a> const *)&gt; func)</td></tr>
+<tr class="separator:a01e59627c04498ff02ff2d8a9eccc1d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a324d0e617b9519bc30099c57d4f7be"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a3a324d0e617b9519bc30099c57d4f7be"><td class="memTemplItemLeft" align="right" valign="top">std::set&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classch_1_1_combine_harvester.html#a3a324d0e617b9519bc30099c57d4f7be">GenerateSetFromSysts</a> (std::function&lt; T(<a class="el" href="classch_1_1_systematic.html">ch::Systematic</a> const *)&gt; func)</td></tr>
+<tr class="separator:a3a324d0e617b9519bc30099c57d4f7be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a869c951c635b86fba33b2c550c9c39c9"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classch_1_1_combine_harvester.html#a869c951c635b86fba33b2c550c9c39c9">bin_set</a> ()</td></tr>
+<tr class="separator:a869c951c635b86fba33b2c550c9c39c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51e79e40581a2f3602292cde9a858784"><td class="memItemLeft" align="right" valign="top">std::set&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classch_1_1_combine_harvester.html#a51e79e40581a2f3602292cde9a858784">bin_id_set</a> ()</td></tr>
+<tr class="separator:a51e79e40581a2f3602292cde9a858784"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54433aa1b16fad10c0d29f5d8c789716"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classch_1_1_combine_harvester.html#a54433aa1b16fad10c0d29f5d8c789716">process_set</a> ()</td></tr>
+<tr class="separator:a54433aa1b16fad10c0d29f5d8c789716"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2c92025d60e32b438a3445aa756d631"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classch_1_1_combine_harvester.html#ad2c92025d60e32b438a3445aa756d631">analysis_set</a> ()</td></tr>
+<tr class="separator:ad2c92025d60e32b438a3445aa756d631"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f1ada299ed6d20f749cf10f589c25df"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classch_1_1_combine_harvester.html#a9f1ada299ed6d20f749cf10f589c25df">era_set</a> ()</td></tr>
+<tr class="separator:a9f1ada299ed6d20f749cf10f589c25df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8d68c05c6be27db6568098a15f07e5c"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classch_1_1_combine_harvester.html#aa8d68c05c6be27db6568098a15f07e5c">channel_set</a> ()</td></tr>
+<tr class="separator:aa8d68c05c6be27db6568098a15f07e5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86674bf95164c39facfd5f9583aae613"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classch_1_1_combine_harvester.html#a86674bf95164c39facfd5f9583aae613">mass_set</a> ()</td></tr>
+<tr class="separator:a86674bf95164c39facfd5f9583aae613"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3ef7424cb86d12fd294d9c6de98d533"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classch_1_1_combine_harvester.html#ac3ef7424cb86d12fd294d9c6de98d533">syst_name_set</a> ()</td></tr>
+<tr class="separator:ac3ef7424cb86d12fd294d9c6de98d533"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6db7fd938efd2ce05454a72c4b6cbc78"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classch_1_1_combine_harvester.html#a6db7fd938efd2ce05454a72c4b6cbc78">syst_type_set</a> ()</td></tr>
+<tr class="separator:a6db7fd938efd2ce05454a72c4b6cbc78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Modification</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Methods to modify existing objects.</p>
 <p>See the documentation of each method for details </p>
@@ -236,7 +242,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9ec4406a5a327d11af6257be20865b2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad61cdbfaea0ed88c09651c2a92c934e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classch_1_1_combine_harvester.html#ad61cdbfaea0ed88c09651c2a92c934e2">SetPdfBins</a> (unsigned nbins)</td></tr>
 <tr class="separator:ad61cdbfaea0ed88c09651c2a92c934e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Rates and shapes</div></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Rate, shape and uncertainty evaluation</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Methods to calculate total yields and shapes</p>
 <p>All of these methods are greedy, meaning they will sum over all available objects and evaluate the effect of all uncertainties. They should be used at the end of a chain of filter methods to give the desired yield, shape or uncertainty. </p>
 </div></td></tr>
@@ -260,10 +266,10 @@ Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Methods to create new <a class="el" href="classch_1_1_observation.html">Observation</a>, <a class="el" href="classch_1_1_process.html">Process</a>, <a class="el" href="classch_1_1_systematic.html">Systematic</a> and <a class="el" href="classch_1_1_parameter.html">Parameter</a> objects</p>
 <p>The general order in which these are run is given below.</p>
 <ol type="1">
-<li>The <a class="el" href="classch_1_1_combine_harvester.html#ab06e3c82b65f34051cea4b4c8e4f3710">CombineHarvester::AddObservations</a> and <a class="el" href="classch_1_1_combine_harvester.html#a76585cfc2f452074c2a18de6e4e0700c">CombineHarvester::AddProcesses</a> methods build the desired <a class="el" href="classch_1_1_observation.html">ch::Observation</a> and <a class="el" href="classch_1_1_process.html">ch::Process</a> entries. The rate entries will default to zero at this stage, and are determined automatically in step 3.</li>
-<li>The <a class="el" href="classch_1_1_combine_harvester.html#aab26f47e06ee53fcf1aab5c0940e916f">CombineHarvester::AddSyst</a> method will iterate through each <a class="el" href="classch_1_1_process.html">ch::Process</a> and add a matching <a class="el" href="classch_1_1_systematic.html">ch::Systematic</a> entry, with the name, type and value specfied in the method arguments. This method can be used at the end of a chain of filters to only create <a class="el" href="classch_1_1_systematic.html">ch::Systematic</a> objects for a subset of processes.</li>
+<li>The AddObservations and AddProcesses methods build the desired <a class="el" href="classch_1_1_observation.html">Observation</a> and <a class="el" href="classch_1_1_process.html">ch::Process</a> entries. The rate entries will default to zero at this stage, and are determined automatically in step 3.</li>
+<li>The AddSyst method will iterate through each <a class="el" href="classch_1_1_process.html">Process</a> and add a matching <a class="el" href="classch_1_1_systematic.html">Systematic</a> entry, with the name, type and value specfied in the method arguments. This method can be used at the end of a chain of filters to only create <a class="el" href="classch_1_1_systematic.html">Systematic</a> objects for a subset of processes.</li>
 <li>The method <a class="el" href="classch_1_1_combine_harvester.html#ad4bd2bb5458d8435efd8fff49624b7b0">CombineHarvester::ExtractShapes</a> opens a specified ROOT file and uses the provided pattern rules to load the TH1 objects for all entries. The TH1 integrals are used to set the event rates at this stage.</li>
-<li>Optionally, methods such as <a class="el" href="classch_1_1_combine_harvester.html#a20c5575a1983fbd8ff1b4232128610ff">CombineHarvester::AddBinByBin</a> may be used to prepare additional entries. </li>
+<li>Optionally, methods such as AddBinByBin may be used to prepare additional entries. </li>
 </ol>
 </div></td></tr>
 <tr class="memitem:ab06e3c82b65f34051cea4b4c8e4f3710"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classch_1_1_combine_harvester.html#ab06e3c82b65f34051cea4b4c8e4f3710">AddObservations</a> (std::vector&lt; std::string &gt; <a class="el" href="classch_1_1_combine_harvester.html#a25c231ed8b1614c5d50f192210374474">mass</a>, std::vector&lt; std::string &gt; <a class="el" href="classch_1_1_combine_harvester.html#a672af065808c26e0795259876787c57f">analysis</a>, std::vector&lt; std::string &gt; <a class="el" href="structch_1_1syst_1_1era.html">era</a>, std::vector&lt; std::string &gt; <a class="el" href="structch_1_1syst_1_1channel.html">channel</a>, std::vector&lt; std::pair&lt; int, std::string &gt;&gt; <a class="el" href="classch_1_1_combine_harvester.html#a83dd50569a1f1a4b5a46f2ad2b5c1cdb">bin</a>)</td></tr>
@@ -293,7 +299,7 @@ Friends</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_combine_harvester_8h_source.html#l00044">44</a> of file <a class="el" href="_combine_harvester_8h_source.html">CombineHarvester.h</a>.</p>
+<p>Definition at line <a class="el" href="_combine_harvester_8h_source.html#l00026">26</a> of file <a class="el" href="_combine_harvester_8h_source.html">CombineHarvester.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a359a11f3f6f9ab27fd7f047a6bf31ae8"></a>
 <div class="memitem">
@@ -440,7 +446,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_combine_harvester_8h_source.html#l00054">54</a> of file <a class="el" href="_combine_harvester_8h_source.html">CombineHarvester.h</a>.</p>
+<p>Definition at line <a class="el" href="_combine_harvester_8h_source.html#l00052">52</a> of file <a class="el" href="_combine_harvester_8h_source.html">CombineHarvester.h</a>.</p>
 
 </div>
 </div>
@@ -492,7 +498,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_combine_harvester___datacards_8cc_source.html#l00051">51</a> of file <a class="el" href="_combine_harvester___datacards_8cc_source.html">CombineHarvester_Datacards.cc</a>.</p>
+<p>Definition at line <a class="el" href="_combine_harvester___datacards_8cc_source.html#l00052">52</a> of file <a class="el" href="_combine_harvester___datacards_8cc_source.html">CombineHarvester_Datacards.cc</a>.</p>
 
 </div>
 </div>
@@ -520,7 +526,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_combine_harvester___datacards_8cc_source.html#l00031">31</a> of file <a class="el" href="_combine_harvester___datacards_8cc_source.html">CombineHarvester_Datacards.cc</a>.</p>
+<p>Definition at line <a class="el" href="_combine_harvester___datacards_8cc_source.html#l00032">32</a> of file <a class="el" href="_combine_harvester___datacards_8cc_source.html">CombineHarvester_Datacards.cc</a>.</p>
 
 </div>
 </div>
@@ -548,7 +554,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_combine_harvester___datacards_8cc_source.html#l00259">259</a> of file <a class="el" href="_combine_harvester___datacards_8cc_source.html">CombineHarvester_Datacards.cc</a>.</p>
+<p>Definition at line <a class="el" href="_combine_harvester___datacards_8cc_source.html#l00260">260</a> of file <a class="el" href="_combine_harvester___datacards_8cc_source.html">CombineHarvester_Datacards.cc</a>.</p>
 
 </div>
 </div>
@@ -577,7 +583,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>This reproduces quite a lot of CombineHarvester::ImportParameters </dd></dl>
 
-<p>Definition at line <a class="el" href="_combine_harvester___datacards_8cc_source.html#l00266">266</a> of file <a class="el" href="_combine_harvester___datacards_8cc_source.html">CombineHarvester_Datacards.cc</a>.</p>
+<p>Definition at line <a class="el" href="_combine_harvester___datacards_8cc_source.html#l00267">267</a> of file <a class="el" href="_combine_harvester___datacards_8cc_source.html">CombineHarvester_Datacards.cc</a>.</p>
 
 </div>
 </div>
@@ -962,7 +968,7 @@ template&lt;typename Function &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_combine_harvester_8h_source.html#l00372">372</a> of file <a class="el" href="_combine_harvester_8h_source.html">CombineHarvester.h</a>.</p>
+<p>Definition at line <a class="el" href="_combine_harvester_8h_source.html#l00398">398</a> of file <a class="el" href="_combine_harvester_8h_source.html">CombineHarvester.h</a>.</p>
 
 </div>
 </div>
@@ -982,7 +988,7 @@ template&lt;typename Function &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_combine_harvester_8h_source.html#l00380">380</a> of file <a class="el" href="_combine_harvester_8h_source.html">CombineHarvester.h</a>.</p>
+<p>Definition at line <a class="el" href="_combine_harvester_8h_source.html#l00406">406</a> of file <a class="el" href="_combine_harvester_8h_source.html">CombineHarvester.h</a>.</p>
 
 </div>
 </div>
@@ -1002,7 +1008,7 @@ template&lt;typename Function &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_combine_harvester_8h_source.html#l00387">387</a> of file <a class="el" href="_combine_harvester_8h_source.html">CombineHarvester.h</a>.</p>
+<p>Definition at line <a class="el" href="_combine_harvester_8h_source.html#l00413">413</a> of file <a class="el" href="_combine_harvester_8h_source.html">CombineHarvester.h</a>.</p>
 
 </div>
 </div>
@@ -1022,7 +1028,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_combine_harvester_8h_source.html#l00333">333</a> of file <a class="el" href="_combine_harvester_8h_source.html">CombineHarvester.h</a>.</p>
+<p>Definition at line <a class="el" href="_combine_harvester_8h_source.html#l00359">359</a> of file <a class="el" href="_combine_harvester_8h_source.html">CombineHarvester.h</a>.</p>
 
 </div>
 </div>
@@ -1042,7 +1048,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_combine_harvester_8h_source.html#l00341">341</a> of file <a class="el" href="_combine_harvester_8h_source.html">CombineHarvester.h</a>.</p>
+<p>Definition at line <a class="el" href="_combine_harvester_8h_source.html#l00367">367</a> of file <a class="el" href="_combine_harvester_8h_source.html">CombineHarvester.h</a>.</p>
 
 </div>
 </div>
@@ -1062,7 +1068,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_combine_harvester_8h_source.html#l00349">349</a> of file <a class="el" href="_combine_harvester_8h_source.html">CombineHarvester.h</a>.</p>
+<p>Definition at line <a class="el" href="_combine_harvester_8h_source.html#l00375">375</a> of file <a class="el" href="_combine_harvester_8h_source.html">CombineHarvester.h</a>.</p>
 
 </div>
 </div>
@@ -1316,7 +1322,7 @@ template&lt;typename Function &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_combine_harvester_8h_source.html#l00357">357</a> of file <a class="el" href="_combine_harvester_8h_source.html">CombineHarvester.h</a>.</p>
+<p>Definition at line <a class="el" href="_combine_harvester_8h_source.html#l00383">383</a> of file <a class="el" href="_combine_harvester_8h_source.html">CombineHarvester.h</a>.</p>
 
 </div>
 </div>
@@ -1336,7 +1342,7 @@ template&lt;typename Function &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_combine_harvester_8h_source.html#l00362">362</a> of file <a class="el" href="_combine_harvester_8h_source.html">CombineHarvester.h</a>.</p>
+<p>Definition at line <a class="el" href="_combine_harvester_8h_source.html#l00388">388</a> of file <a class="el" href="_combine_harvester_8h_source.html">CombineHarvester.h</a>.</p>
 
 </div>
 </div>
@@ -1356,7 +1362,7 @@ template&lt;typename Function &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_combine_harvester_8h_source.html#l00367">367</a> of file <a class="el" href="_combine_harvester_8h_source.html">CombineHarvester.h</a>.</p>
+<p>Definition at line <a class="el" href="_combine_harvester_8h_source.html#l00393">393</a> of file <a class="el" href="_combine_harvester_8h_source.html">CombineHarvester.h</a>.</p>
 
 </div>
 </div>
@@ -1696,7 +1702,7 @@ template&lt;class Map &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_combine_harvester_8h_source.html#l00395">395</a> of file <a class="el" href="_combine_harvester_8h_source.html">CombineHarvester.h</a>.</p>
+<p>Definition at line <a class="el" href="_combine_harvester_8h_source.html#l00421">421</a> of file <a class="el" href="_combine_harvester_8h_source.html">CombineHarvester.h</a>.</p>
 
 </div>
 </div>
