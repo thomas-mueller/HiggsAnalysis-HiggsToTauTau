@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['observation',['Observation',['../classch_1_1_observation.html',1,'ch']]]
+  ['mass',['mass',['../structch_1_1syst_1_1mass.html',1,'ch::syst']]]
 ];

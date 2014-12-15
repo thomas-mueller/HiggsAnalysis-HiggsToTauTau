@@ -16,6 +16,9 @@ var dir_5dc317956fa60ac77cdbadd82354438e =
     [ "Parameter.h", "_parameter_8h.html", [
       [ "Parameter", "classch_1_1_parameter.html", "classch_1_1_parameter" ]
     ] ],
+    [ "Plotting.h", "_plotting_8h.html", "_plotting_8h" ],
+    [ "Plotting_Contours.h", "_plotting___contours_8h.html", "_plotting___contours_8h" ],
+    [ "Plotting_Style.h", "_plotting___style_8h.html", "_plotting___style_8h" ],
     [ "Process.h", "_process_8h.html", [
       [ "Process", "classch_1_1_process.html", "classch_1_1_process" ]
     ] ],

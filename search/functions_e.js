@@ -6,6 +6,7 @@ var searchData=
   ['parsetable',['ParseTable',['../namespacech.html#afe5f9ba35945d3828d4d2cb2ef979797',1,'ch']]],
   ['pdf',['pdf',['../classch_1_1_process.html#afbce7b1c6d9fc6cfcebdf4b3c54e6bd3',1,'ch::Process']]],
   ['pdfs',['pdfs',['../classch_1_1_combine_harvester.html#a2b38f8591d1dc642136160c96112ec55',1,'ch::CombineHarvester']]],
+  ['positionedlegend',['PositionedLegend',['../_plotting_8h.html#a658a1da4505b61eb5a0f0db01c01e161',1,'Plotting.h']]],
   ['print',['print',['../structch_1_1tupleprint_1_1_tuple_printer.html#ac56a48381e7a162e1d0c4508045678ff',1,'ch::tupleprint::TuplePrinter::print()'],['../structch_1_1tupleprint_1_1_tuple_printer_3_01_tuple_00_011_01_4.html#a4792690e23c8eab9d9857a1aebd9059b',1,'ch::tupleprint::TuplePrinter&lt; Tuple, 1 &gt;::print()'],['../structch_1_1tupleprint_1_1_tuple_printer_3_01_tuple_00_010_01_4.html#ade2db8176ec0411cc79bb931d63bde09',1,'ch::tupleprint::TuplePrinter&lt; Tuple, 0 &gt;::print()']]],
   ['printall',['PrintAll',['../classch_1_1_combine_harvester.html#a63ffe9b598a7a6dc9f3cab118b3703df',1,'ch::CombineHarvester']]],
   ['printheader',['PrintHeader',['../classch_1_1_observation.html#a4f8f4cc0a612fc88effb03189daa3b13',1,'ch::Observation::PrintHeader()'],['../classch_1_1_parameter.html#a62b6307c0675a81c420b9d6807928227',1,'ch::Parameter::PrintHeader()'],['../classch_1_1_process.html#ab2cc280e1babe330441de6791e06c2c1',1,'ch::Process::PrintHeader()'],['../classch_1_1_systematic.html#aef9f627405060f65815dc15a1d4abbaf',1,'ch::Systematic::PrintHeader()']]],

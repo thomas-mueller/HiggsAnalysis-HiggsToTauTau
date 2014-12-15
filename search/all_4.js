@@ -8,7 +8,9 @@ var searchData=
   ['err_5fu',['err_u',['../classch_1_1_parameter.html#a72f08021fdbbc3f9760427363ea8e3a5',1,'ch::Parameter']]],
   ['example_2ecpp',['Example.cpp',['../_example_8cpp.html',1,'']]],
   ['extractdata',['ExtractData',['../classch_1_1_combine_harvester.html#ac40e961ea428fa6411ec8e3b6ddeadef',1,'ch::CombineHarvester']]],
+  ['extractexpected',['ExtractExpected',['../_limit_compare_8cpp.html#a5972ac9cbbc276c5a1d48d38a1cda770',1,'LimitCompare.cpp']]],
   ['extractfitparameters',['ExtractFitParameters',['../namespacech.html#a49fb1eb0d277893e0f6a9cc099d4cf28',1,'ch']]],
+  ['extractgraph',['ExtractGraph',['../_plot1_d_scan_8cpp.html#ab476682b052386be902a8a745ae48216',1,'ExtractGraph(TTree *t, double &amp;bestFit):&#160;Plot1DScan.cpp'],['../_plot_mass_scan_8cpp.html#ab476682b052386be902a8a745ae48216',1,'ExtractGraph(TTree *t, double &amp;bestFit):&#160;PlotMassScan.cpp']]],
   ['extractpdfs',['ExtractPdfs',['../classch_1_1_combine_harvester.html#aa2e347cf60d754c30a4a3c97708b3ce1',1,'ch::CombineHarvester']]],
   ['extractsampledfitparameters',['ExtractSampledFitParameters',['../namespacech.html#a9ba092c0c88fd0a122b927b83d91a4de',1,'ch']]],
   ['extractshapes',['ExtractShapes',['../classch_1_1_combine_harvester.html#ad4bd2bb5458d8435efd8fff49624b7b0',1,'ch::CombineHarvester']]]
