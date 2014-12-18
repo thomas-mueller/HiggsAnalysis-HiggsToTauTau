@@ -1,9 +1,7 @@
 var dir_5dc317956fa60ac77cdbadd82354438e =
 [
     [ "Algorithm.h", "_algorithm_8h.html", "_algorithm_8h" ],
-    [ "CombineHarvester.h", "_combine_harvester_8h.html", [
-      [ "CombineHarvester", "classch_1_1_combine_harvester.html", "classch_1_1_combine_harvester" ]
-    ] ],
+    [ "CombineHarvester.h", "_combine_harvester_8h.html", "_combine_harvester_8h" ],
     [ "HistMapping.h", "_hist_mapping_8h.html", [
       [ "HistMapping", "structch_1_1_hist_mapping.html", "structch_1_1_hist_mapping" ]
     ] ],

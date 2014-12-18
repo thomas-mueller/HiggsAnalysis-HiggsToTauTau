@@ -4,5 +4,6 @@ var searchData=
   ['rebinhist',['RebinHist',['../namespacech.html#a2cbcfd049543bfe9f63958bc671deeae',1,'ch']]],
   ['renameparameter',['RenameParameter',['../classch_1_1_combine_harvester.html#a2825b9eeec47f7b23f93520bf615b581',1,'ch::CombineHarvester']]],
   ['restorebinning',['RestoreBinning',['../namespacech.html#a23cd9444931a49de080638458f722501',1,'ch']]],
-  ['rezerotgraph',['ReZeroTGraph',['../_plotting_8h.html#af2524f9f02ac66a16164c87bfc149628',1,'Plotting.h']]]
+  ['rezerotgraph',['ReZeroTGraph',['../_plotting_8h.html#af2524f9f02ac66a16164c87bfc149628',1,'Plotting.h']]],
+  ['roundtrip_2ecpp',['RoundTrip.cpp',['../_round_trip_8cpp.html',1,'']]]
 ];

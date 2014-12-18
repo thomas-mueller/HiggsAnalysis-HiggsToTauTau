@@ -12,6 +12,7 @@ var searchData=
   ['getobservedrate',['GetObservedRate',['../classch_1_1_combine_harvester.html#a0b5444f9dcfa6fdace5fa2d8dc2ca11f',1,'ch::CombineHarvester']]],
   ['getobservedshape',['GetObservedShape',['../classch_1_1_combine_harvester.html#a0d3eca727963c0c14a3c04bbdce2ca5e',1,'ch::CombineHarvester']]],
   ['getpadymax',['GetPadYMax',['../_plotting_8h.html#a94fa210a8324e72a82327860972746eb',1,'GetPadYMax(TPad *pad, double x_min, double x_max):&#160;Plotting.h'],['../_plotting_8h.html#afa343295bd66905121be203cb7c7cc03',1,'GetPadYMax(TPad *pad):&#160;Plotting.h']]],
+  ['getparameter',['GetParameter',['../classch_1_1_combine_harvester.html#ac293d0d0ac5fff3bab85f86d1a9dcb01',1,'ch::CombineHarvester::GetParameter(std::string const &amp;name) const '],['../classch_1_1_combine_harvester.html#ab994bb3d7ccc19475a28f5864831841e',1,'ch::CombineHarvester::GetParameter(std::string const &amp;name)']]],
   ['getparameters',['GetParameters',['../classch_1_1_combine_harvester.html#abc51018136713ef4bec670b85eda7584',1,'ch::CombineHarvester']]],
   ['getqualififedname',['GetQualififedName',['../_logging_8h.html#a8a78fcca9ff810edc6792356c221093e',1,'GetQualififedName():&#160;Logging.cc'],['../namespacech.html#a082a87dbfd5b9d61198f7fd4b68e70f9',1,'ch::GetQualififedName()']]],
   ['getrate',['GetRate',['../classch_1_1_combine_harvester.html#aff4165661f9f137607d6c3c881172689',1,'ch::CombineHarvester']]],

@@ -29,7 +29,6 @@ var searchData=
   ['setdatastyle',['SetDataStyle',['../_s_o_b_plot_8cpp.html#a39a785e003c057838ceacda7c133e027',1,'SetDataStyle(TH1F &amp;ele):&#160;SOBPlot.cpp'],['../_s_o_b_plot_8cpp.html#a1f86f1b2bfe94720b8290ae69ce65b94',1,'SetDataStyle(TGraphAsymmErrors &amp;ele):&#160;SOBPlot.cpp']]],
   ['setfrombinname',['SetFromBinName',['../namespacech.html#aff954a1b039e5245ae5262c94a761045',1,'ch']]],
   ['setmcstackstyle',['SetMCStackStyle',['../_s_o_b_plot_8cpp.html#af8b0a719a4ab61f7283d8ab1d87d5277',1,'SOBPlot.cpp']]],
-  ['setparameters',['SetParameters',['../classch_1_1_combine_harvester.html#a89583394f683d9d1bef377b9a906ccc0',1,'ch::CombineHarvester']]],
   ['setpdfbins',['SetPdfBins',['../classch_1_1_combine_harvester.html#ad61cdbfaea0ed88c09651c2a92c934e2',1,'ch::CombineHarvester']]],
   ['setproperties',['SetProperties',['../namespacech.html#a0ea5d53cb275e53807f576a4020cf15e',1,'ch']]],
   ['setstandardbinname',['SetStandardBinName',['../namespacech.html#a66d6313bbf7ea9647b9f9af8cb8aaedb',1,'ch']]],

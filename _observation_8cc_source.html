@@ -177,11 +177,11 @@ $(document).ready(function(){initNavTree('_observation_8cc_source.html','');});
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  }</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="comment">// Otherwise we validate this new hist. First is to check that all bins have</span></div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="comment">// +ve values, otherwise the interpretation as a pdf is tricky</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt;= shape-&gt;GetNbinsX(); ++i) {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">if</span> (shape-&gt;GetBinContent(i) &lt; 0.) {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      <span class="keywordflow">throw</span> std::runtime_error(<a class="code" href="_logging_8h.html#ab140ae8826e1f99c5aa0e920a9c13112">FNERROR</a>(<span class="stringliteral">&quot;TH1 has a bin with content &lt; 0&quot;</span>));</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="comment">// for (int i = 1; i &lt;= shape-&gt;GetNbinsX(); ++i) {</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="comment">//   if (shape-&gt;GetBinContent(i) &lt; 0.) {</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="comment">//     throw std::runtime_error(FNERROR(&quot;TH1 has a bin with content &lt; 0&quot;));</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="comment">//   }</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="comment">// }</span></div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="comment">// At this point we can safely move the shape in and take ownership</span></div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  shape_ = std::move(shape);</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="comment">// Ensure that root will not try and clean this up</span></div>

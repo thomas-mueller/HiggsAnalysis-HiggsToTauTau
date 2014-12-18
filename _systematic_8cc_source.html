@@ -214,27 +214,27 @@ $(document).ready(function(){initNavTree('_systematic_8cc_source.html','');});
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  }</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt;= shape_u-&gt;GetNbinsX(); ++i) {</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">if</span> (shape_u-&gt;GetBinContent(i) &lt; 0.) {</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      <span class="keywordflow">throw</span> std::runtime_error(</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;          <a class="code" href="_logging_8h.html#ab140ae8826e1f99c5aa0e920a9c13112">FNERROR</a>(<span class="stringliteral">&quot;shape_u TH1 has a bin with content &lt; 0&quot;</span>));</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    }</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  }</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt;= shape_d-&gt;GetNbinsX(); ++i) {</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordflow">if</span> (shape_d-&gt;GetBinContent(i) &lt; 0.) {</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      <span class="keywordflow">throw</span> std::runtime_error(</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;          <a class="code" href="_logging_8h.html#ab140ae8826e1f99c5aa0e920a9c13112">FNERROR</a>(<span class="stringliteral">&quot;shape_d TH1 has a bin with content &lt; 0&quot;</span>));</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="comment">// for (int i = 1; i &lt;= shape_u-&gt;GetNbinsX(); ++i) {</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="comment">//   if (shape_u-&gt;GetBinContent(i) &lt; 0.) {</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="comment">//     throw std::runtime_error(</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="comment">//         FNERROR(&quot;shape_u TH1 has a bin with content &lt; 0&quot;));</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="comment">//   }</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="comment">// }</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="comment">// for (int i = 1; i &lt;= shape_d-&gt;GetNbinsX(); ++i) {</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="comment">//   if (shape_d-&gt;GetBinContent(i) &lt; 0.) {</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <span class="comment">//     throw std::runtime_error(</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <span class="comment">//         FNERROR(&quot;shape_d TH1 has a bin with content &lt; 0&quot;));</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="comment">//   }</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="comment">// }</span></div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keywordflow">if</span> (nominal) {</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt;= nominal-&gt;GetNbinsX(); ++i) {</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;      <span class="keywordflow">if</span> (nominal-&gt;GetBinContent(i) &lt; 0.) {</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordflow">throw</span> std::runtime_error(</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            <a class="code" href="_logging_8h.html#ab140ae8826e1f99c5aa0e920a9c13112">FNERROR</a>(<span class="stringliteral">&quot;nominal TH1 has a bin with content &lt; 0&quot;</span>));</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;      }</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    }</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="comment">// if (nominal) {</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <span class="comment">//   for (int i = 1; i &lt;= nominal-&gt;GetNbinsX(); ++i) {</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <span class="comment">//     if (nominal-&gt;GetBinContent(i) &lt; 0.) {</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="comment">//       throw std::runtime_error(</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="comment">//           FNERROR(&quot;nominal TH1 has a bin with content &lt; 0&quot;));</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="comment">//     }</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <span class="comment">//   }</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <span class="comment">// }</span></div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  shape_u_ = std::move(shape_u);</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  shape_d_ = std::move(shape_d);</div>
@@ -313,7 +313,6 @@ $(document).ready(function(){initNavTree('_systematic_8cc_source.html','');});
 <div class="ttc" id="classch_1_1_systematic_html_a40fb079acc7cdf7acd81d7bccb653f8a"><div class="ttname"><a href="classch_1_1_systematic.html#a40fb079acc7cdf7acd81d7bccb653f8a">ch::Systematic::set_value_d</a></div><div class="ttdeci">void set_value_d(double const &amp;value_d)</div><div class="ttdef"><b>Definition:</b> <a href="_systematic_8h_source.html#l00036">Systematic.h:36</a></div></div>
 <div class="ttc" id="classch_1_1_systematic_html_a495c6a0c53d7bf58fbb8ef0666f34deb"><div class="ttname"><a href="classch_1_1_systematic.html#a495c6a0c53d7bf58fbb8ef0666f34deb">ch::Systematic::asymm</a></div><div class="ttdeci">bool asymm() const </div><div class="ttdef"><b>Definition:</b> <a href="_systematic_8h_source.html#l00043">Systematic.h:43</a></div></div>
 <div class="ttc" id="classch_1_1_systematic_html_ae72c57591746155a32cd36adc350e92a"><div class="ttname"><a href="classch_1_1_systematic.html#ae72c57591746155a32cd36adc350e92a">ch::Systematic::swap</a></div><div class="ttdeci">friend void swap(Systematic &amp;first, Systematic &amp;second)</div><div class="ttdef"><b>Definition:</b> <a href="_systematic_8cc_source.html#l00029">Systematic.cc:29</a></div></div>
-<div class="ttc" id="_logging_8h_html_ab140ae8826e1f99c5aa0e920a9c13112"><div class="ttname"><a href="_logging_8h.html#ab140ae8826e1f99c5aa0e920a9c13112">FNERROR</a></div><div class="ttdeci">#define FNERROR(x)</div><div class="ttdef"><b>Definition:</b> <a href="_logging_8h_source.html#l00008">Logging.h:8</a></div></div>
 <div class="ttc" id="_systematic_8h_html"><div class="ttname"><a href="_systematic_8h.html">Systematic.h</a></div></div>
 <div class="ttc" id="classch_1_1_systematic_html_ad1b2cea6db762cb634344e9c842450f9"><div class="ttname"><a href="classch_1_1_systematic.html#ad1b2cea6db762cb634344e9c842450f9">ch::Systematic::analysis</a></div><div class="ttdeci">std::string const &amp; analysis() const </div><div class="ttdef"><b>Definition:</b> <a href="_systematic_8h_source.html#l00046">Systematic.h:46</a></div></div>
 <div class="ttc" id="classch_1_1_systematic_html_accf5f1c59b7c712d701d879452597e94"><div class="ttname"><a href="classch_1_1_systematic.html#accf5f1c59b7c712d701d879452597e94">ch::Systematic::shape_u</a></div><div class="ttdeci">TH1 const * shape_u() const </div><div class="ttdef"><b>Definition:</b> <a href="_systematic_8h_source.html#l00061">Systematic.h:61</a></div></div>

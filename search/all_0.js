@@ -2,8 +2,8 @@ var searchData=
 [
   ['addbinbybin',['AddBinByBin',['../classch_1_1_combine_harvester.html#a20c5575a1983fbd8ff1b4232128610ff',1,'ch::CombineHarvester']]],
   ['addmssmsystematics',['AddMSSMSystematics',['../namespacech.html#a597c0a29e463a96eb05f9df8cb9dfe90',1,'ch']]],
-  ['addobservations',['AddObservations',['../classch_1_1_combine_harvester.html#ab06e3c82b65f34051cea4b4c8e4f3710',1,'ch::CombineHarvester']]],
-  ['addprocesses',['AddProcesses',['../classch_1_1_combine_harvester.html#a76585cfc2f452074c2a18de6e4e0700c',1,'ch::CombineHarvester']]],
+  ['addobservations',['AddObservations',['../classch_1_1_combine_harvester.html#a8d7ccde30bda35ec084f4e38b923ef23',1,'ch::CombineHarvester']]],
+  ['addprocesses',['AddProcesses',['../classch_1_1_combine_harvester.html#a1ecb940a59ea7a2039956a07882e9ccc',1,'ch::CombineHarvester']]],
   ['addsyst',['AddSyst',['../classch_1_1_combine_harvester.html#aab26f47e06ee53fcf1aab5c0940e916f',1,'ch::CombineHarvester']]],
   ['addsystematics_5fee_5fmm',['AddSystematics_ee_mm',['../namespacech.html#a4d79c4fca0a76cc62c91d580644c051c',1,'ch']]],
   ['addsystematics_5fem',['AddSystematics_em',['../namespacech.html#afe8f3907b055d2d6c0bc8b2bb7f74a02',1,'ch']]],
