@@ -150,24 +150,25 @@ $(document).ready(function(){initNavTree('_round_trip_8cpp_source.html','');});
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  po::notify(vm);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <a class="code" href="classch_1_1_combine_harvester.html">ch::CombineHarvester</a> cmb;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  cmb.<a class="code" href="classch_1_1_combine_harvester.html#aa65fe68ae736e6b612a9c35f42adf02f">ParseDatacard</a>(datacard, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, 0, mass);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordflow">if</span> (print) cmb.<a class="code" href="classch_1_1_combine_harvester.html#a63ffe9b598a7a6dc9f3cab118b3703df">PrintAll</a>();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  TH1::AddDirectory(<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  cmb.<a class="code" href="classch_1_1_combine_harvester.html#a63255dd5ec491fa12857bc63b4174e92">WriteDatacard</a>(output.c_str(), output_file.c_str());</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="comment">// cmb.SetVerbosity(2);</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  cmb.<a class="code" href="classch_1_1_combine_harvester.html#aa65fe68ae736e6b612a9c35f42adf02f">ParseDatacard</a>(datacard, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, 0, mass);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordflow">if</span> (print) cmb.<a class="code" href="classch_1_1_combine_harvester.html#a63ffe9b598a7a6dc9f3cab118b3703df">PrintAll</a>();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  TH1::AddDirectory(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  cmb.<a class="code" href="classch_1_1_combine_harvester.html#a63255dd5ec491fa12857bc63b4174e92">WriteDatacard</a>(output.c_str(), output_file.c_str());</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
 <div class="ttc" id="classch_1_1_combine_harvester_html"><div class="ttname"><a href="classch_1_1_combine_harvester.html">ch::CombineHarvester</a></div><div class="ttdef"><b>Definition:</b> <a href="_combine_harvester_8h_source.html#l00029">CombineHarvester.h:29</a></div></div>
-<div class="ttc" id="classch_1_1_combine_harvester_html_a63255dd5ec491fa12857bc63b4174e92"><div class="ttname"><a href="classch_1_1_combine_harvester.html#a63255dd5ec491fa12857bc63b4174e92">ch::CombineHarvester::WriteDatacard</a></div><div class="ttdeci">void WriteDatacard(std::string const &amp;name, std::string const &amp;root_file)</div><div class="ttdef"><b>Definition:</b> <a href="_combine_harvester___datacards_8cc_source.html#l00299">CombineHarvester_Datacards.cc:299</a></div></div>
+<div class="ttc" id="classch_1_1_combine_harvester_html_a63255dd5ec491fa12857bc63b4174e92"><div class="ttname"><a href="classch_1_1_combine_harvester.html#a63255dd5ec491fa12857bc63b4174e92">ch::CombineHarvester::WriteDatacard</a></div><div class="ttdeci">void WriteDatacard(std::string const &amp;name, std::string const &amp;root_file)</div><div class="ttdef"><b>Definition:</b> <a href="_combine_harvester___datacards_8cc_source.html#l00300">CombineHarvester_Datacards.cc:300</a></div></div>
 <div class="ttc" id="classch_1_1_combine_harvester_html_aa65fe68ae736e6b612a9c35f42adf02f"><div class="ttname"><a href="classch_1_1_combine_harvester.html#aa65fe68ae736e6b612a9c35f42adf02f">ch::CombineHarvester::ParseDatacard</a></div><div class="ttdeci">int ParseDatacard(std::string const &amp;filename, std::string const &amp;analysis, std::string const &amp;era, std::string const &amp;channel, int bin_id, std::string const &amp;mass)</div><div class="ttdef"><b>Definition:</b> <a href="_combine_harvester___datacards_8cc_source.html#l00052">CombineHarvester_Datacards.cc:52</a></div></div>
 <div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
 <div class="ttc" id="_combine_harvester_8h_html"><div class="ttname"><a href="_combine_harvester_8h.html">CombineHarvester.h</a></div></div>
 <div class="ttc" id="_round_trip_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="_round_trip_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> <a href="_round_trip_8cpp_source.html#l00011">RoundTrip.cpp:11</a></div></div>
-<div class="ttc" id="classch_1_1_combine_harvester_html_a63ffe9b598a7a6dc9f3cab118b3703df"><div class="ttname"><a href="classch_1_1_combine_harvester.html#a63ffe9b598a7a6dc9f3cab118b3703df">ch::CombineHarvester::PrintAll</a></div><div class="ttdeci">CombineHarvester &amp; PrintAll()</div><div class="ttdef"><b>Definition:</b> <a href="_combine_harvester_8cc_source.html#l00161">CombineHarvester.cc:161</a></div></div>
+<div class="ttc" id="classch_1_1_combine_harvester_html_a63ffe9b598a7a6dc9f3cab118b3703df"><div class="ttname"><a href="classch_1_1_combine_harvester.html#a63ffe9b598a7a6dc9f3cab118b3703df">ch::CombineHarvester::PrintAll</a></div><div class="ttdeci">CombineHarvester &amp; PrintAll()</div><div class="ttdef"><b>Definition:</b> <a href="_combine_harvester_8cc_source.html#l00190">CombineHarvester.cc:190</a></div></div>
 <div class="ttc" id="_t_file_i_o_8h_html"><div class="ttname"><a href="_t_file_i_o_8h.html">TFileIO.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

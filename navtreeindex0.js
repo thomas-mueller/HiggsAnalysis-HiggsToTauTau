@@ -156,7 +156,7 @@ var NAVTREEINDEX0 =
 "_plotting___style_8h.html#a7f6399c7470d5331ac4c464cb14c86e1":[4,0,0,0,10,1],
 "_plotting___style_8h_source.html":[4,0,0,0,10],
 "_post_fit_plot2_8cpp.html":[4,0,0,2,11],
-"_post_fit_plot2_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97":[4,0,0,2,11,0],
+"_post_fit_plot2_8cpp.html#a81ce304348a420752ee080480d2b3095":[4,0,0,2,11,0],
 "_post_fit_plot2_8cpp_source.html":[4,0,0,2,11],
 "_post_fit_shapes_8cpp.html":[4,0,0,2,12],
 "_post_fit_shapes_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97":[4,0,0,2,12,0],

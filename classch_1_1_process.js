@@ -31,6 +31,8 @@ var classch_1_1_process =
     [ "ShapeAsTH1F", "classch_1_1_process.html#a75dddf259aac5a30b652a7f838fccc5d", null ],
     [ "set_pdf", "classch_1_1_process.html#a29daf76545fd7b93af93aa0b42af1790", null ],
     [ "pdf", "classch_1_1_process.html#afbce7b1c6d9fc6cfcebdf4b3c54e6bd3", null ],
+    [ "set_data", "classch_1_1_process.html#a97283db14e35e64eef1f0231c8cdd64c", null ],
+    [ "data", "classch_1_1_process.html#a2e2e290f4c554cf76456180913188b7b", null ],
     [ "set_norm", "classch_1_1_process.html#a0d192379f39205b78311bd0d8cb13f20", null ],
     [ "norm", "classch_1_1_process.html#ab41c6e3bf638dbb480404166185ed0a1", null ],
     [ "operator<<", "classch_1_1_process.html#ae3d2ec9cc05d5e849bc0271cf46f45b5", null ],
