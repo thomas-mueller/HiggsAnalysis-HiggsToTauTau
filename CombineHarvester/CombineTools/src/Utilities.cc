@@ -96,6 +96,25 @@ void ScaleProcessRate(ch::Process* p,
   p->set_rate(p->rate() * scale);
 }
 
+void ScaleProcessRate(ch::Process* p,
+                      std::map<std::string, double> const* factors,
+                      std::string const& prod, std::string const& decay) {
+  double scale = 1.0;
+  if (prod != "") {
+    if (!factors->count(prod))
+      throw std::runtime_error(
+          FNERROR("Requested scale factor " + prod + " not found in map"));
+    scale *= factors->find(prod)->second;
+  }
+  if (decay != "") {
+    if (!factors->count(decay))
+      throw std::runtime_error(
+          FNERROR("Requested scale factor " + decay + " not found in map"));
+    scale *= factors->find(decay)->second;
+  }
+  p->set_rate(p->rate() * scale);
+}
+
 // ---------------------------------------------------------------------------
 // Misc
 // ---------------------------------------------------------------------------

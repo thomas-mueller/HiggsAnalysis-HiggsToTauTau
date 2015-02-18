@@ -104,6 +104,10 @@ void ScaleProcessRate(ch::Process* p,
                       std::string const& prod, std::string const& decay,
                       std::string const& force_mass = "");
 
+void ScaleProcessRate(ch::Process* p,
+                      std::map<std::string, double> const* factors,
+                      std::string const& prod, std::string const& decay);
+
 // ---------------------------------------------------------------------------
 // Misc
 // ---------------------------------------------------------------------------
