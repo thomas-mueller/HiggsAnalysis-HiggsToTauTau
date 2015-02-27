@@ -74,6 +74,19 @@ void ParseTable(std::map<std::string, TGraph>* graphs, std::string const& file,
   }
 }
 
+void ParseTable(std::map<std::string, double>* values, std::string const& file) {
+  auto lines = ch::ParseFileLines(file);
+  for (unsigned i = 0; i < lines.size(); ++i) {
+    std::vector<std::string> words;
+    boost::split(words, lines[i], boost::is_any_of("\t "),
+                 boost::token_compress_on);
+    if (words.size() < 2)
+      throw std::runtime_error(
+          FNERROR("Table \"" + file + "\" must contain at least two columns"));
+    (*values)[words[0]] = boost::lexical_cast<double>(words[1]);
+  }
+}
+
 void ScaleProcessRate(ch::Process* p,
                       std::map<std::string, TGraph> const* graphs,
                       std::string const& prod, std::string const& decay,

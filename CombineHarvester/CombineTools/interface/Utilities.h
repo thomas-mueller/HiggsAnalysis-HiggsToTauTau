@@ -98,6 +98,7 @@ void SetFromBinName(T *input, std::string parse_rules) {
 
 void ParseTable(std::map<std::string, TGraph>* graphs, std::string const& file,
                 std::vector<std::string> const& fields);
+void ParseTable(std::map<std::string, double>* values, std::string const& file);
 
 void ScaleProcessRate(ch::Process* p,
                       std::map<std::string, TGraph> const* graphs,
