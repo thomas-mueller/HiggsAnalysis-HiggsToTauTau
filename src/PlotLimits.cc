@@ -368,7 +368,7 @@ PlotLimits::higgsConstraint(const char* directory, double mass, double deltaM, c
     std::string line;
     bool filled = false;
     float tanb_save=-99.0, tanb, mh, mA, mH, upperTanb=-1., lowerTanb=-1., mhiggs=0;
-    ifstream higgs (TString::Format("HiggsAnalysis/HiggsToTauTau/data/Higgs125/%s/higgs_%d.dat", model, (int)bins_[imass])); 
+    std::ifstream higgs (TString::Format("HiggsAnalysis/HiggsToTauTau/data/Higgs125/%s/higgs_%d.dat", model, (int)bins_[imass])); 
     if(higgs.is_open()){
       while(higgs.good()){
 	getline(higgs,line);

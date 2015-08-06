@@ -56,7 +56,7 @@ PlotLimits::plot1DScan(TCanvas& canv, const char* directory)
     float mass = bins_[imass];
     if(verbosity_>2){ std::cout << mass << std::endl; }
     std::string line; 
-    ifstream file(TString::Format("%s/%d/.scan", directory, (int)mass));
+    std::ifstream file(TString::Format("%s/%d/.scan", directory, (int)mass));
     if(file.is_open()){
       while( file.good() ){
 	getline(file,line);
