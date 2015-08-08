@@ -540,7 +540,7 @@ void CombineHarvester::WriteDatacard(std::string const& name,
   txt_file << "\n";
   txt_file << "observation  ";
   for (auto const& obs : obs_) {
-    txt_file << boost::format("%-15.1f ") % obs->rate();
+    txt_file << boost::format("%-15.4f ") % obs->rate();
   }
   txt_file << "\n";
   txt_file << dashes << "\n";
