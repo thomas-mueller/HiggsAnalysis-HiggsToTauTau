@@ -101,15 +101,17 @@ int main(int argc, char* argv[]){
   }
 
   if (factors) {
-    std::cout << boost::format("%-25s %-32s\n") % "Bin" % "Total relative uncert. (prefit)";
-    std::cout << string(58, '-') << "\n";
+    std::cout << "postfit_scales = {}\n";
+    //std::cout << boost::format("%-25s %-32s\n") % "Bin" % "Total relative uncert. (prefit)";
+    //std::cout << string(58, '-') << "\n";
   }
   for (auto bin : bins) {
     ch::CombineHarvester cmb_bin = move(cmb.cp().bin({bin}));
     double rate = cmb_bin.cp().backgrounds().GetRate();
     double err  = cmb_bin.cp().backgrounds().GetUncertainty();
     if (factors)
-      std::cout << boost::format("%-25s %-10.5f\n") % bin %
+      std::cout << boost::format("postfit_scales.setdefault(\"%s\", {})[\"TotalRelUncPrefit\"] = %f\n") % bin %
+      //std::cout << boost::format("%-25s %-10.5f\n") % bin %
                        (rate > 0. ? (err / rate) : 0.);
   }
 
@@ -119,26 +121,27 @@ int main(int argc, char* argv[]){
     res = new RooFitResult(ch::OpenFromTFile<RooFitResult>(fitresult));
     cmb.UpdateParameters(res);
 
-    if (factors) {
+    /*if (factors) {
       std::cout << boost::format("\n%-25s %-32s\n") % "Bin" % "Total relative uncert. (postfit)";
       std::cout << string(58, '-') << "\n";
-    }
+    }*/
     for (auto bin : bins) {
       ch::CombineHarvester cmb_bin = move(cmb.cp().bin({bin}));
       double rate = cmb_bin.cp().backgrounds().GetRate();
       double err  = sampling ? cmb_bin.cp().backgrounds().GetUncertainty(res, 500)
                              : cmb_bin.cp().backgrounds().GetUncertainty();
       if (factors)
-        std::cout << boost::format("%-25s %-10.5f\n") % bin %
+        std::cout << boost::format("postfit_scales.setdefault(\"%s\", {})[\"TotalRelUncPostfit\"] = %f\n") % bin %
+        //std::cout << boost::format("%-25s %-10.5f\n") % bin %
                          (rate > 0. ? (err / rate) : 0.);
     }
 
     map<string, map<string, TH1F>> post_shapes;
-    if (factors) {
+    /*if (factors) {
       std::cout << boost::format("\n%-25s %-20s %-10s\n") % "Bin" % "Process" %
                        "Scale factor";
       std::cout << string(58, '-') << "\n";
-    }
+    }*/
 
     for (auto bin : bins) {
       ch::CombineHarvester cmb_bin = move(cmb.cp().bin({bin}));
@@ -151,7 +154,8 @@ int main(int argc, char* argv[]){
                 ? cmb_bin.cp().process({proc}).GetShapeWithUncertainty(res, 500)
                 : cmb_bin.cp().process({proc}).GetShapeWithUncertainty();
         if (factors)
-          std::cout << boost::format("%-25s %-20s %-10.5f\n") % bin % proc %
+          std::cout << boost::format("postfit_scales.setdefault(\"%s\", {})[\"%s\"] = %f\n") % bin % proc %
+          //std::cout << boost::format("%-25s %-20s %-10.5f\n") % bin % proc %
                            (pre_shapes[bin][proc].Integral() > 0.
                                 ? (post_shapes[bin][proc].Integral() /
                                    pre_shapes[bin][proc].Integral())
